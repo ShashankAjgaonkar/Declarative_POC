@@ -1,1 +1,1 @@
-create or replace database PROD_INGESTION_DB;
+create or replace database {{environment}}_INGESTION_DB;
