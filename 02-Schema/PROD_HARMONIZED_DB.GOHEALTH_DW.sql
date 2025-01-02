@@ -1,0 +1,1 @@
+create or replace schema {{environment}}_INGESTION_DB.GOHEALTH_DW;

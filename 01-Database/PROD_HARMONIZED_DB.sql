@@ -1,0 +1,1 @@
+create or replace database {{environment}}_HARMONIZED_DB;
