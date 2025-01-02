@@ -1,4 +1,5 @@
 default_connection_name = "myconnection"
+[connections]
 [connections.myconnection]
 warehouse = "QUICKSTART_WH"
 role = "ACCOUNTADMIN"
