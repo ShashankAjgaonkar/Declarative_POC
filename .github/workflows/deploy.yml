@@ -47,6 +47,8 @@ jobs:
             RETENTION_TIME=0
           fi
           snow git execute \
-            "@${REPO_NAME}/branches/${BRANCH_NAME}/0[3456789]_*" \
+          
+            "@${REPO_NAME}/branches/${BRANCH_NAME}/0[3456789]-*" \
+
             -D "environment='${BRANCH_NAME}'" \
             -D "retention_time=${RETENTION_TIME}"
