@@ -1,0 +1,8 @@
+[connections.default]
+warehouse = "QUICKSTART_WH"
+role = "ACCOUNTADMIN"
+database = "DEMO_DB"
+schema = "DEMO"
+account = "xq88480.ap-southeast-1"
+user = "snow"
+password = "#definePASS2"
