@@ -51,6 +51,6 @@ jobs:
             -D "environment='${BRANCH_NAME}'" \
             -D "retention_time=${RETENTION_TIME}"
           snow git execute \
-            "@${REPO_NAME}/branches/${BRANCH_NAME}/1[23456789]-*" \
+            "@${REPO_NAME}/branches/${BRANCH_NAME}/9[23456789]-*" \
             -D "environment='${BRANCH_NAME}'" \
             -D "retention_time=${RETENTION_TIME}"
