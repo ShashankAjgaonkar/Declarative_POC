@@ -2,9 +2,9 @@ name: Deploy data pipeline
 on:
   push:
     branches:
-    - DEV
-    - QA
-    - PROD
+    - dev
+    - qa
+    - prod
 
   workflow_dispatch:
     inputs:
