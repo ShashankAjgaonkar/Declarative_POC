@@ -5,4 +5,5 @@ CREATE OR ALTER TABLE {{environment}}_INGESTION_DB.inova_base.HELLO_WORLD
   ,SALARY NUMBER
   ,age number
   ,test1 varchar
+  ,test2 varchar
 );
