@@ -8,5 +8,5 @@
     ,test2 varchar
     ,shashank varchar
     ,ajgaonkar varchar
-    .sa number
+    ,sa number
   );
