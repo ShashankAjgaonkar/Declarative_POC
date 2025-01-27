@@ -9,4 +9,5 @@
     ,shashank varchar
     ,ajgaonkar varchar
     ,sa number
+    ,a varchar
   );
