@@ -5,5 +5,6 @@ create or alter TABLE {{environment}}_INGESTION_DB.INOVA_BASE.DIMAGE (
 	BASEUPDATEDDATE TIMESTAMP_NTZ(9),
 	BASEDELETEDFLAG NUMBER(38,0),
     test1 varchar,
-	TEST2 VARCHAR
+	TEST2 VARCHAR,
+	test3 number
 );
