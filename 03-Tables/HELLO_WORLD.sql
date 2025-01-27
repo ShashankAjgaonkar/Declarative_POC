@@ -6,5 +6,4 @@
     ,age number
     ,test1 varchar
     ,test2 varchar
-    ,test3 number
   );
