@@ -24,6 +24,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Set up Environment variables
+        run: |
+          echo "ROLE=${{ secrets.DEV_ROLE }}" >> $GITHUB_ENV
       - name: Determine branch name
         id: set-branch
         run: |
