@@ -29,7 +29,7 @@ jobs:
           echo "ROLE=${{ secrets.DEV_ROLE }}" >> $GITHUB_ENV
           echo ${{ secrets.DEV_ROLE }}
       - name: Replace Secrets in config.toml
-        run: sed -i "s|\${ROLE}|${ROLE}|g" .snowflake/${{ github.ref_name }}/config.toml
+        run: sed -i "s|\${ROLE}|\"${{ secrets.DEV_ROLE }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
 
       - name: Determine branch name
         id: set-branch
