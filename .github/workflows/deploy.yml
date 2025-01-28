@@ -24,12 +24,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Set up Environment variables
-        run: |
-          echo "ROLE=${{ secrets.DEV_ROLE }}" >> $GITHUB_ENV
-          echo ${{ secrets.DEV_ROLE }}
+
       - name: Replace Secrets in config.toml
-        run: sed -i "s|\${ROLE}|\"${{ secrets.DEV_ROLE }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
+        run: |
+          if [ "${{ github.ref_name }}" == "qa" ]; then
+            sed -i "s|\${ROLE}|\"${{ secrets.QA_ROLE }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
+          elif [ "${{ github.ref_name }}" == "prod" ]; then
+            sed -i "s|\${ROLE}|\"${{ secrets.PROD_ROLE }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
+          else
+            sed -i "s|\${ROLE}|\"${{ secrets.DEV_ROLE }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
+          fi
+
 
       - name: Determine branch name
         id: set-branch
