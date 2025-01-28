@@ -27,6 +27,7 @@ jobs:
       - name: Set up Environment variables
         run: |
           echo "ROLE=${{ secrets.DEV_ROLE }}" >> $GITHUB_ENV
+          echo ${{ secrets.DEV_ROLE }}
       - name: Determine branch name
         id: set-branch
         run: |
