@@ -2,7 +2,7 @@ default_connection_name = "myconnection"
 [connections]
 [connections.myconnection]
 warehouse = "COMPUTE_WH"
-role = "${ROLE}"
+role = ${ROLE}
 database = "DEMO_DB"
 schema = "DEMO"
 account = "xq88480.ap-southeast-1"
