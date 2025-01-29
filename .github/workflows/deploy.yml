@@ -27,6 +27,10 @@ jobs:
 
       - name: Replace Secrets in config.toml
         run: |
+          sed -i "s|\${ACCOUNT}|\"${{ secrets.ACCOUNT }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
+          sed -i "s|\${USER}|\"${{ secrets.USER }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
+          sed -i "s|\${PASSWORD}|\"${{ secrets.PASSWORD }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
+          
           if [ "${{ github.ref_name }}" == "qa" ]; then
             sed -i "s|\${ROLE}|\"${{ secrets.QA_ROLE }}\"|g" .snowflake/${{ github.ref_name }}/config.toml
           elif [ "${{ github.ref_name }}" == "prod" ]; then
